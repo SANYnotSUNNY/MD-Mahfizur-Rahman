@@ -4,10 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MD Mahfizur Rahman</title>
-
 <style>
 html { scroll-behavior: smooth; }
-
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -24,7 +22,6 @@ nav {
     text-align: center;
     z-index: 10;
 }
-
 nav a {
     color: #38bdf8;
     margin: 0 15px;
@@ -37,16 +34,35 @@ header {
     text-align: center;
     padding: 60px 20px;
 }
-
-header img {
+header a img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
     border: 4px solid #38bdf8;
-    box-shadow: 0 0 25px rgba(56,189,248,0.7);
+    box-shadow: 0 0 25px #38bdf8, 0 0 50px #0ff;
+    animation: floatGlow 3s ease-in-out infinite alternate;
+    object-fit: cover;
+    cursor: pointer;
+}
+@keyframes floatGlow {
+    0% { transform: translateY(0px); box-shadow: 0 0 25px #38bdf8, 0 0 50px #0ff; }
+    50% { transform: translateY(-10px); box-shadow: 0 0 40px #38bdf8, 0 0 70px #0ff; }
+    100% { transform: translateY(0px); box-shadow: 0 0 25px #38bdf8, 0 0 50px #0ff; }
+}
+header h1 {
+    font-size: 2.5em;
+    margin: 15px 0 5px 0;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #38bdf8, 0 0 30px #38bdf8;
+    animation: nameGlow 3s infinite alternate;
+}
+@keyframes nameGlow {
+    0% { text-shadow: 0 0 10px #0ff, 0 0 20px #38bdf8, 0 0 30px #38bdf8; }
+    50% { text-shadow: 0 0 20px #0ff, 0 0 40px #38bdf8, 0 0 60px #0ff; }
+    100% { text-shadow: 0 0 10px #0ff, 0 0 20px #38bdf8, 0 0 30px #38bdf8; }
 }
 
-/* TYPING */
+/* Typing effect */
 .typing {
     font-size: 20px;
     color: #38bdf8;
@@ -54,11 +70,11 @@ header img {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
+    display: inline-block;
     animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
 }
-
-@keyframes typing { from { width: 0 } to { width: 100% } }
-@keyframes blink { 50% { border-color: transparent } }
+@keyframes typing { from { width: 0 } to { width: 100%; } }
+@keyframes blink { 50% { border-color: transparent; } }
 
 /* SECTIONS */
 section {
@@ -69,12 +85,10 @@ section {
     transform: translateY(30px);
     transition: 1s;
 }
-
 section.show {
     opacity: 1;
     transform: translateY(0);
 }
-
 h2 {
     border-left: 5px solid #38bdf8;
     padding-left: 10px;
@@ -138,7 +152,6 @@ footer {
 }
 </style>
 </head>
-
 <body>
 
 <!-- NAVBAR -->
@@ -153,7 +166,9 @@ footer {
 
 <!-- HEADER -->
 <header>
-    <img src="profile.jpg" alt="MD Mahfizur Rahman">
+    <a href="https://www.linkedin.com/in/mahfizur-rahman-sany" target="_blank">
+        <img src="images/profile.jpg" alt="MD Mahfizur Rahman">
+    </a>
     <h1>MD Mahfizur Rahman</h1>
     <div class="typing">Planning Officer | Operations Specialist</div>
 </header>
@@ -295,4 +310,4 @@ document.getElementById("copyEmail").addEventListener("click", ()=>{
 </script>
 
 </body>
-</html>>
+</html>
