@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MD Mahfizur Rahman</title>
+
+<style>
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: #020617;
+    padding: 15px;
+    text-align: center;
+    z-index: 10;
+}
+
+nav a {
+    color: #38bdf8;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #38bdf8;
+    box-shadow: 0 0 25px rgba(56,189,248,0.7);
+}
+
+/* TYPING */
+.typing {
+    font-size: 20px;
+    color: #38bdf8;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 4s steps(40, end) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing { from { width: 0 } to { width: 100% } }
+@keyframes blink { 50% { border-color: transparent } }
+
+/* SECTIONS */
+section {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 1s;
+}
+
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    border-left: 5px solid #38bdf8;
+    padding-left: 10px;
+}
+
+/* CARD */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 12px;
+}
+
+/* SKILLS */
+.skill { margin: 10px 0; }
+.bar {
+    background: #334155;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.fill {
+    height: 10px;
+    background: #38bdf8;
+    width: 0;
+    transition: 2s;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background: #38bdf8;
+    color: #0f172a;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #020617;
+}
+
+/* FIREWORK */
+.firework {
+    position:absolute;
+    pointer-events:none;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background: gold;
+    animation: explode 0.7s forwards;
+}
+@keyframes explode {
+    0% { transform: scale(1) translate(0,0); opacity:1;}
+    100% { transform: scale(2) translate(var(--x), var(--y)); opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
+<header>
+    <img src="profile.jpg" alt="MD Mahfizur Rahman">
+    <h1>MD Mahfizur Rahman</h1>
+    <div class="typing">Planning Officer | Operations Specialist</div>
+</header>
+
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card">
+        <p>I am currently working as a Planning Officer at Argon Denims Ltd, focusing on production planning and coordination.</p>
+        <p>Previously worked as Operation Engineer at Fair Electronics Ltd.</p>
+    </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+    <h2>Academic Qualifications</h2>
+    <div class="card">
+        <h3>B.Sc in Engineering (EEE)</h3>
+        <p>Green University of Bangladesh</p>
+    </div>
+    <div class="card">
+        <h3>Diploma in Engineering (Electrical Technology)</h3>
+        <p>Rangpur Polytechnic Institute</p>
+    </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+    <h2>Experience</h2>
+    <div class="card">
+        <h3>Planning Officer - Argon Denims Ltd</h3>
+        <ul>
+            <li>Production planning and scheduling</li>
+            <li>Coordination with teams</li>
+            <li>Monitoring production progress</li>
+        </ul>
+    </div>
+    <div class="card">
+        <h3>Operation Engineer - Fair Electronics Ltd</h3>
+        <ul>
+            <li>Managed operations</li>
+            <li>Data analysis and reporting</li>
+        </ul>
+    </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">Production Planning
+        <div class="bar"><div class="fill" data-width="90%"></div></div>
+    </div>
+    <div class="skill">Excel Dashboard
+        <div class="bar"><div class="fill" data-width="85%"></div></div>
+    </div>
+    <div class="skill">Data Analysis
+        <div class="bar"><div class="fill" data-width="80%"></div></div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card">
+        <h3>Excel Dashboard</h3>
+        <p>Dynamic dashboard with charts and slicers.</p>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: <span id="email">mdmahfizurrahmansany@gmail.com</span> <button class="btn" id="copyEmail">Copy</button></p>
+        <p>Phone: <span id="phone">+8801786820342</span> <button class="btn" id="copyPhone">Copy</button></p>
+        <a href="MD_Mahfizur_Rahman_CV.pdf" class="btn" download>Download CV</a>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 MD Mahfizur Rahman</p>
+</footer>
+
+<script>
+// SCROLL ANIMATION
+const sections = document.querySelectorAll("section");
+window.addEventListener("scroll", () => {
+    sections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if(top < window.innerHeight - 100){
+            sec.classList.add("show");
+        }
+    });
+});
+
+// SKILL ANIMATION
+const fills = document.querySelectorAll(".fill");
+window.addEventListener("scroll", () => {
+    fills.forEach(fill => {
+        const top = fill.getBoundingClientRect().top;
+        if(top < window.innerHeight){
+            fill.style.width = fill.getAttribute("data-width");
+        }
+    });
+});
+
+// COPY WITH FIREWORKS
+function fireworkEffect(x, y){
+    for(let i=0;i<15;i++){
+        const fire = document.createElement("div");
+        fire.classList.add("firework");
+        fire.style.left = x + "px";
+        fire.style.top = y + "px";
+        fire.style.setProperty('--x', (Math.random()*200-100)+'px');
+        fire.style.setProperty('--y', (Math.random()*-200)+'px');
+        document.body.appendChild(fire);
+        setTimeout(()=>fire.remove(),700);
+    }
+}
+
+document.getElementById("copyPhone").addEventListener("click", ()=>{
+    const text = document.getElementById("phone").innerText;
+    navigator.clipboard.writeText(text).then(()=>{
+        const rect = document.getElementById("copyPhone").getBoundingClientRect();
+        fireworkEffect(rect.left + rect.width/2, rect.top + rect.height/2);
+        alert("Phone number copied!");
+    });
+});
+
+document.getElementById("copyEmail").addEventListener("click", ()=>{
+    const text = document.getElementById("email").innerText;
+    navigator.clipboard.writeText(text).then(()=>{
+        const rect = document.getElementById("copyEmail").getBoundingClientRect();
+        fireworkEffect(rect.left + rect.width/2, rect.top + rect.height/2);
+        alert("Email copied!");
+    });
+});
+</script>
+
+</body>
+</html>>
